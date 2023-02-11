@@ -1,0 +1,62 @@
+body {
+    font-family: Calibri ;
+    margin: 1% 7% 1% 7%;
+}
+
+h2 {
+    font-style: italic;
+}
+
+.name {
+    font-size: 150%;
+    font-weight: bold;
+    margin: 0px;
+    text-align: center;
+}
+
+.prof-contact {
+    font-size: 110%;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.self-image {
+    display: block;
+    border: 2px solid white;
+    border-radius: 50%;
+    height: 125px;
+    width: 125px;
+    margin: auto;
+}
+
+.header {
+    background-color: #5198ca;
+    border-radius: 10px;
+    color: white;
+    padding-top: 5px;
+}
+
+.summary {
+    padding-left: 16px;
+}
+
+.experience {
+    padding-left: 16px;
+}
+
+.skills {
+    padding-left: 16px;
+}
+
+.my-coding-schedule {
+    padding-left: 16px;
+    margin-bottom: 20px;
+}
+
+.contacts {
+    padding-left: 16px;
+    border: 5px dashed #5198ca;
+    padding-bottom: 25px;
+    padding-top: 0px;
+    background-color: #c7c7c7;
+}
