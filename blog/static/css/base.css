@@ -9,12 +9,14 @@
     color: #ffffff;
     font-size: 36pt;
     text-decoration: none;
+    text-align: center;
 }
 
 .page-header h2 {
     color: white;
     font-size: 20pt;
     text-decoration: none;
+    text-align: center;
 }
 
 h1,
@@ -27,7 +29,6 @@ h4 {
 .project-item {
     width: 150px;
     height: 150px;
-    margin-left: 15px;
     border: 3px solid #8FBC8F;
     border-radius: 10%;
     font-size: 20pt;
@@ -35,6 +36,8 @@ h4 {
     line-height: 144px;
     display: inline-block;
     transition: 0.5s;
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
 .project-item:hover {
@@ -46,11 +49,16 @@ h4 {
     width: 40px;
 }
 
+.social {
+    text-align: center;
+}
+
 img {
     width: 45px;
     padding: 5px;
     object-fit: cover;
     transition: 0.5s;
+    display: inline-block;
 }
 
 img:hover {
@@ -59,7 +67,7 @@ img:hover {
 }
 
 p {
-    margin-left: 25px;
+    text-align: center;
 }
 
 a,

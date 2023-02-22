@@ -9,23 +9,25 @@
 	</head>
 	<body>
     <header class="page-header">
-      <div>
+      <div class="container">
       	<h1>Axel Bawor</h1>
       	<h2>Emerging Developer</h2>
-        <div>
-          <a href='https://www.linkedin.com/in/axel-bawor-883aa5127/' target='_blank'><img src="  https://cdn.freebiesupply.com/logos/thumbs/2x/linkedin-icon-logo.png"></a>
-          <a href='https://github.com/abawor' target='_blank'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Github-circle_%28CoreUI_Icons_v1.0.0%29.svg/2048px-Github-circle_%28CoreUI_Icons_v1.0.0%29.svg.png" id="github"></a>
-          <a href='https://www.sololearn.com/profile/2713098' target='_blank'><img src="https://blob.sololearn.com/avatars/sololearn.png"></a>
-        </div>
       </div>
+      <div class="social">
+        <a href='https://www.linkedin.com/in/axel-bawor-883aa5127/' target='_blank'><img src="  https://cdn.freebiesupply.com/logos/thumbs/2x/linkedin-icon-logo.png"></a>
+        <a href='https://github.com/abawor' target='_blank'><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Github-circle_%28CoreUI_Icons_v1.0.0%29.svg/2048px-Github-circle_%28CoreUI_Icons_v1.0.0%29.svg.png" id="github"></a>
+        <a href='https://www.sololearn.com/profile/2713098' target='_blank'><img src="https://blob.sololearn.com/avatars/sololearn.png"></a>
+    </div>
     </header>
-    <p>
-      <a href="{% url 'blog' %}" class="top-left project-item">Blog</a>
-      <a href="{% url 'resume' %}" class="top-right project-item">Resume</a>
-    </p>
-    <p>
-      <a href="/" class="bottom-left project-item">Game</a>
-      <a href="/" class="bottom-right project-item">Database</a>
-    </p>
+    <div class="container">
+      <p>
+        <a href="{% url 'blog' %}" class="top-left project-item">Blog</a>
+        <a href="{% url 'resume' %}" class="top-right project-item">Resume</a>
+      </p>
+      <p>
+        <a href="/" class="bottom-left project-item">Game</a>
+        <a href="/" class="bottom-right project-item">Database</a>
+      </p>
+    </div>
 	</body>
 </html>

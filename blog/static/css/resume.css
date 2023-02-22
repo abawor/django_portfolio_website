@@ -30,7 +30,7 @@ h2 {
 }
 
 .header {
-    background-color: #5198ca;
+    background-color: #8FBC8F;
     border-radius: 10px;
     color: white;
     padding-top: 5px;
@@ -53,10 +53,3 @@ h2 {
     margin-bottom: 20px;
 }
 
-.contacts {
-    padding-left: 16px;
-    border: 5px dashed #5198ca;
-    padding-bottom: 25px;
-    padding-top: 0px;
-    background-color: #c7c7c7;
-}
