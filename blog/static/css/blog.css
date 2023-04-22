@@ -1,5 +1,6 @@
 .page-header {
-    background-color: #8FBC8F;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(13,9,121,1) 20%, rgba(0,212,255,1) 100%);    margin-top: 0;
     margin-top: 0;
     margin-bottom: 40px;
     padding: 20px 20px 20px 40px;
@@ -70,3 +71,9 @@ h4 {
     background-color: #8FBC8F;
 }
 
+#home {
+    width: 35px;
+    margin-top: 12px;
+    margin-right: 5px;
+    float: right;
+}
