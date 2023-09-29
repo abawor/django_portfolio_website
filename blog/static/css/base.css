@@ -32,9 +32,11 @@ h4 {
     border: 3px solid rgba(13,9,121,1);
     border-radius: 10%;
     font-size: 20pt;
-    text-align: center;
-    line-height: 144px;
-    display: inline-block;
+    vertical-align: middle;
+    line-height: 35px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
     transition: 1s;
     margin-left: 6px;
     margin-right: 6px;
