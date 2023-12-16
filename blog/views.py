@@ -8,16 +8,20 @@ from django.shortcuts import redirect
 def home_page(request):
     return render(request, 'webapp/base.html')
 
+
 def resume(request):
     return render(request, 'webapp/resume.html')
+
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'webapp/post_list.html', {'posts': posts})
 
+
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'webapp/post_detail.html', {'post': post})
+
 
 def post_new(request):
     if request.method == "POST":
