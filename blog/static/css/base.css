@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Source Code Pro', monospace;
@@ -9,10 +15,10 @@
     --clr-dark: #303030;
     --clr-accent: #16e0bd;
     
-    --fs-h1: 3rem;
-    --fs-h2: 2.25rem;
-    --fs-h3: 1.25rem;
-    --fs-body: 1rem;
+    --fs-h1: 2rem;
+    --fs-h2: 1.5rem;
+    --fs-h3: 1.125rem;
+    --fs-body: 0.9rem;
 
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
@@ -20,10 +26,10 @@
 
 @media (min-width: 800px) {
     :root {
-        --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
-        --fs-h3: 1.5rem;
-        --fs-body: 1.125rem;
+        --fs-h1: 3rem;
+        --fs-h2: 2.25rem;
+        --fs-h3: 1.25rem;
+        --fs-body: 1rem;
     }
 }
 
@@ -42,25 +48,12 @@ body {
     line-height: 1.6;
 }
 
-
-.header {
-    background-color: #16e0bd;
-}
-
-.nav-bar {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    max-width: 1000px;
-    margin: 0 auto;
-    font-size: var(--fs-h3);
-}
-
 a,
 i {
     text-decoration: none;
     color: var(--clr-dark);
     transition: color 0.3s;
+    cursor: pointer;
 }
 
 a:hover,
@@ -68,10 +61,108 @@ i:hover {
     color: var(--clr-light);
 }
 
+.section_title {
+    font-size: var(--fs-h1);
+}
+
+.section_subtitle {
+    font-size: var(--fs-h2);
+}
 
 
+/* Header */
+
+.header {
+    background-color: #16e0bd;
+    padding: 1em;
+    font-weight: bold;
+}
+
+.nav-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 2em;
+    font-size: var(--fs-body);
+}
+
+.links > a {
+    margin: auto 0.5em;
+}
+
+/* Intro */
+
+.intro {
+    background-color: var(--clr-light);
+    display: block;
+    height: calc(100vh - 2em);
+}
+
+.intro-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    margin: 0 2em;
+}
+
+.intro-text .section_title {
+    font-weight: bold;
+}
+
+.social {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    background-color: var(--clr-accent);
+    transform: translateY(-50%);
+}
+
+.social > i {
+    padding: 1.5em 1em;
+}
+
+.social .fa-brands,
+.social .fa-solid {
+    font-size: var(--fs-h2);
+    padding: 0.6em 0.4em;
+    width: 100%;
+    text-align: center;
+}
 
 
+@media (max-width: 600px) {
+    .social {
+        display: none;
+    }
+}
+
+/* About me */
+
+.about-me {
+    background-color: var(--clr-accent);
+}
+
+/* Projects */
+
+.projects {
+    background-color: var(--clr-light);
+}
+
+/* Contact */
+
+.contact {
+    background-color: var(--clr-accent);
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--clr-light);
+}
 
 
 
