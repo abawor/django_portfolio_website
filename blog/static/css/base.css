@@ -12,8 +12,10 @@
     --fw-bold: 900;
     
     --clr-light: #fff;
+    --clr-medium: #c2c1c1;
     --clr-dark: #303030;
-    --clr-accent: #16e0bd;
+    --clr-accent: #ffee00;
+    --clr-main: #791e7c;
     
     --fs-h1: 2rem;
     --fs-h2: 1.5rem;
@@ -51,14 +53,14 @@ body {
 a,
 i {
     text-decoration: none;
-    color: var(--clr-dark);
-    transition: color 0.3s;
+    color: var(--clr-light);
+    transition: color 0.5s;
     cursor: pointer;
 }
 
 a:hover,
 i:hover {
-    color: var(--clr-light);
+    color: var(--clr-accent);
 }
 
 .section_title {
@@ -73,7 +75,7 @@ i:hover {
 /* Header */
 
 .header {
-    background-color: #16e0bd;
+    background-color: var(--clr-main);
     padding: 1em;
     font-weight: bold;
 }
@@ -117,7 +119,7 @@ i:hover {
     display: flex;
     flex-direction: column;
     top: 50%;
-    background-color: var(--clr-accent);
+    background-color: var(--clr-medium);
     transform: translateY(-50%);
 }
 
@@ -131,6 +133,14 @@ i:hover {
     padding: 0.6em 0.4em;
     width: 100%;
     text-align: center;
+    color: var(--clr-dark);
+    transition: background-color 0.5s;
+}
+
+.social .fa-brands:hover,
+.social .fa-solid:hover {
+    color: var(--clr-accent);
+    background-color: var(--clr-main);
 }
 
 
@@ -143,7 +153,8 @@ i:hover {
 /* About me */
 
 .about-me {
-    background-color: var(--clr-accent);
+    background-color: var(--clr-main);
+    color: var(--clr-light);
 }
 
 /* Projects */
@@ -155,7 +166,8 @@ i:hover {
 /* Contact */
 
 .contact {
-    background-color: var(--clr-accent);
+    background-color: var(--clr-main);
+    color: var(--clr-light);
 }
 
 /* Footer */
