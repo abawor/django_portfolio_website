@@ -77,6 +77,10 @@ section {
     font-size: var(--fs-h2);
 }
 
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
 
 /* Header */
 
@@ -170,6 +174,12 @@ section {
     gap: 5em;
 }
 
+@media (max-width: 800px) {
+    .about-me-columns {
+        display: block;
+    }
+}
+
 .about-me-my-story,
 .about-me-skills {
     flex: 1;
@@ -211,8 +221,45 @@ section {
     }
 }
 
+.portfolio_item {
+    background-color: var(--clr-main);
+    overflow: hidden;
+    position: relative;
+}
+
 .portfolio_item img {
     width: 100%;
+    transition: opacity 0.4s ease-in-out, scale 0.4s;
+}
+
+.portfolio_item img:hover {
+    opacity: 0.7;
+    scale: 1.2;
+}
+
+
+.hidden_text {
+    visibility: hidden;
+    font-size: var(--fs-h3);
+    opacity: 0;
+    transition: display 0.4s, opacity 0.4s;
+    color: var(--clr-light);
+    background-color: var(--clr-main);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.5em 1em;
+    border-radius: 15px;
+    z-index: 100;
+    pointer-events: none;
+    transition: visibility 0.4s, opacity 0.4s;
+
+}
+
+.portfolio_item:hover .hidden_text {
+    visibility: visible;
+    opacity: 0.8;
 }
 
 /* Contact */
@@ -232,91 +279,3 @@ section {
 
 
 
-
-
-
-
-
-/*
-.page-header {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(13,9,121,1) 20%, rgba(0,212,255,1) 100%);    margin-top: 0;
-    margin-bottom: 40px;
-    padding: 20px 20px 20px 40px;
-}
-
-.header h1 {
-    color: #ffffff;
-    font-size: 36pt;
-    text-decoration: none;
-    text-align: center;
-}
-
-.header h2 {
-    color: white;
-    font-size: 20pt;
-    text-decoration: none;
-    text-align: center;
-}
-
-h1,
-h2,
-h3,
-h4 {
-    font-family: 'Red Hat Display', cursive;
-}
-
-.project-item {
-    width: 150px;
-    height: 150px;
-    border: 3px solid rgba(13,9,121,1);
-    border-radius: 10%;
-    font-size: 20pt;
-    vertical-align: middle;
-    line-height: 35px;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: 1s;
-    margin-left: 6px;
-    margin-right: 6px;
-}
-
-.project-item:hover {
-    background: #1054ac;
-    color: white;
-    transition: 1s;
-}
-
-#github {
-    width: 40px;
-}
-
-.social {
-    text-align: center;
-}
-
-img {
-    width: 45px;
-    padding: 5px;
-    object-fit: cover;
-    transition: 0.5s;
-    display: inline-block;
-}
-
-img:hover {
-    transform: scale(1.2);
-    transition: 0.5s;
-}
-
-p {
-    text-align: center;
-}
-
-a,
-a:hover {
-    text-decoration: none;
-    color: black;
-}
-
-*/
