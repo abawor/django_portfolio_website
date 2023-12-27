@@ -63,8 +63,14 @@ i:hover {
     color: var(--clr-accent);
 }
 
+section {
+    padding: 2em 0;
+}
+
 .section_title {
     font-size: var(--fs-h1);
+    text-align: center;
+    font-weight: bold;
 }
 
 .section_subtitle {
@@ -78,6 +84,9 @@ i:hover {
     background-color: var(--clr-main);
     padding: 1em;
     font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .nav-bar {
@@ -143,19 +152,46 @@ i:hover {
     background-color: var(--clr-main);
 }
 
-
-@media (max-width: 600px) {
-    .social {
-        display: none;
-    }
-}
-
 /* About me */
 
 .about-me {
-    background-color: var(--clr-main);
-    color: var(--clr-light);
+    background-color: var(--clr-medium);
+    color: var(--clr-dark);
 }
+
+.about-me-desc {
+    margin: 1em 2em 3em;
+    text-align: center;
+}
+
+.about-me-columns {
+    margin: auto 2em;
+    display: flex;
+    gap: 5em;
+}
+
+.about-me-my-story,
+.about-me-skills {
+    flex: 1;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.skills-list li {
+    background-color: var(--clr-main);
+    color: white;
+    padding: 0.25em 0.75em;
+    border-radius: 5px;
+}
+
+
+
 
 /* Projects */
 
@@ -163,11 +199,27 @@ i:hover {
     background-color: var(--clr-light);
 }
 
+.portfolio_items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .portfolio_items {
+        grid-template-columns: 1fr;
+    }
+}
+
+.portfolio_item img {
+    width: 100%;
+}
+
 /* Contact */
 
 .contact {
-    background-color: var(--clr-main);
-    color: var(--clr-light);
+    background-color: var(--clr-medium);
+    color: var(--clr-dark);
 }
 
 /* Footer */
