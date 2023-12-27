@@ -28,11 +28,11 @@
     <!-- Intro -->
     <section class="intro" id="intro">
       <div class="intro-text">
-        <h1 class="section_title">HEY, I'M AXEL BAWOR</h1>
-        <h2 class="section_subtitle">
+        <div class="section_title">HEY, I'M AXEL BAWOR</div>
+        <div class="section_subtitle">
           A Web Developer building the Frontend and Backend <br>
           of Websites and Web Applications.
-      </h2>
+      </div>
       </div>
       <div class="social">
         <a href="https://www.linkedin.com/in/axel-bawor-883aa5127/" target="_blank">
@@ -50,14 +50,14 @@
     <!-- About me -->
     <section class="about-me" id="about-me">
       <div class="container">
-        <h1 class="section_title">ABOUT ME</h1>
+        <div class="section_title">ABOUT ME</div>
         <p class="about-me-desc">
           Here you will find more information about me, what I do, and my current skills 
           mostly in terms of programming and technology.
         </p>
         <div class="about-me-columns">
           <div class="about-me-my-story">
-            <h2 class="section_subtitle my-story">My story</h2>
+            <div class="section_subtitle my-story">My story</div>
             <p>
               My journey as a programmer started back in 2016, when I took a Python programming 
               for Rhino course.
@@ -74,7 +74,7 @@
             </p>
           </div>
           <div class="about-me-skills">
-            <h2 class="section_subtitle skills">Skills</h2>
+            <div class="section_subtitle skills">Skills</div>
             <ul class="skills-list">
               <li>HTML</li>
               <li>CSS</li>
@@ -144,11 +144,28 @@
 
     <!-- Contact -->
     <section class="contact" id="contact">
-      <h1 class="section_title">CONTACT ME</h1>
-      <h2 class="section_subtitle">
-        Feel free to Contact me by submitting the form below and I will get back 
-        to you as soon as possible
-      </h2>
+      <div class="container">
+        <div class="section_title">CONTACT ME</div>
+        <div class="section_subtitle">
+          Feel free to Contact me by submitting the form below and I will get back 
+          to you as soon as possible.
+        </div>
+        <div class="contact_form_container">
+          <form class="contact_form">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name">
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name">
+        
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here" style="height:200px"></textarea>
+        
+            <input type="submit" value="Submit" class="submit_message">
+        
+          </form>
+        </div>
+      </div>
     </section>
 
 
