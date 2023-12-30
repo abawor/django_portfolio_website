@@ -53,14 +53,7 @@ body {
 a,
 i {
     text-decoration: none;
-    color: var(--clr-light);
-    transition: color 0.5s;
     cursor: pointer;
-}
-
-a:hover,
-i:hover {
-    color: var(--clr-accent);
 }
 
 section {
@@ -101,7 +94,11 @@ section {
     font-size: var(--fs-body);
 }
 
-.links > a {
+.nav-bar a {
+    color: var(--clr-light);
+}
+
+.nav_bar_links a {
     margin: auto 0.5em;
 }
 
@@ -127,7 +124,7 @@ section {
     font-weight: bold;
 }
 
-.social {
+.intro_social {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -136,12 +133,14 @@ section {
     transform: translateY(-50%);
 }
 
-.social > i {
+.intro_social i {
     padding: 1.5em 1em;
+    color: var(--clr-light);
+    transition: color 0.5s;
 }
 
-.social .fa-brands,
-.social .fa-solid {
+.intro_social .fa-brands,
+.intro_social .fa-solid {
     font-size: var(--fs-h2);
     padding: 0.6em 0.4em;
     width: 100%;
@@ -150,8 +149,8 @@ section {
     transition: background-color 0.5s;
 }
 
-.social .fa-brands:hover,
-.social .fa-solid:hover {
+.intro_social .fa-brands:hover,
+.intro_social .fa-solid:hover {
     color: var(--clr-accent);
     background-color: var(--clr-main);
 }
@@ -227,9 +226,8 @@ section {
     overflow: hidden;
     position: relative;
     border-radius: 20px;
-    border: 5px transparent;
+    border: 5px solid var(--clr-medium);
     transition: border 0.4s, background-color 0.4s;
-
 }
 
 .portfolio_item:hover {
@@ -239,15 +237,12 @@ section {
 
 .portfolio_item img {
     width: 100%;
-    border: 5px solid var(--clr-medium);
-    border-radius: 20px;
-    transition: opacity 0.4s ease-in-out, scale 0.4s, border;
+    transition: opacity 0.4s ease-in-out, scale 0.4s;
 }
 
 .portfolio_item img:hover {
     opacity: 0.7;
     scale: 1.1;
-    border: none;
 }
 
 
@@ -336,7 +331,33 @@ input[type=text], select, textarea {
 /* Footer */
 
 .footer {
-    background-color: var(--clr-light);
+    background-color: var(--clr-dark);
+    font-size: var(--fs-h3);
+    color: var(--clr-light);
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+    padding: 2em 0;
+}
+
+.footer_my_name,
+.footer_social_title {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
+}
+
+.footer_my_profile {
+    font-size: var(--fs-body);
+}
+
+.footer_social_links i {
+    color: var(--clr-light);
+    font-size: 1.2em;
+    margin-right: 1em;
 }
 
 
