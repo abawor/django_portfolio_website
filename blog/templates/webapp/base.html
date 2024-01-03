@@ -21,6 +21,7 @@
           <a href="#projects">Projects</a>
           <a href="{% url 'blog' %}">Blog</a>
           <a href="{% url 'resume' %}">Resume</a>
+          <a href="#contact">Contact</a>
         </div>
       </nav>
     </header>
@@ -28,8 +29,8 @@
     <!-- Intro -->
     <section class="intro" id="intro">
       <div class="intro-text">
-        <div class="section_title">HEY, I'M AXEL BAWOR</div>
-        <div class="section_subtitle">
+        <div class="intro_title">HEY, I'M AXEL BAWOR</div>
+        <div class="intro_subtitle">
           A Web Developer building the Frontend and Backend <br>
           of Websites and Web Applications.
       </div>
@@ -52,27 +53,27 @@
     <section class="about-me" id="about-me">
       <div class="container">
         <div class="section_title">ABOUT ME</div>
-        <p class="about-me-desc">
+        <div class="section_subtitle about-me-desc">
           Here you will find more information about me, what I do, and my current skills 
           mostly in terms of programming and technology.
-        </p>
+        </div>
         <div class="about-me-columns">
           <div class="about-me-my-story">
             <div class="section_subtitle my-story">My story</div>
-            <p>
+            <div>
               My journey as a programmer started back in 2016, when I took a Python programming 
               for Rhino course.
-    
+              <br><br>
               After building automation scripts in spare time at my workplace for few years I 
               have decided to fully dive into learning how to code.
-              
+              <br><br>
               This full-on journey began in September 2022 and has been the best experience of 
               my professional life to date.
-              
+              <br><br>
               Since I started I have built apps I thought only professional programmers can do. 
               I have also realised that this will be a never ending learning curve - and that 
               I love it! 💜
-            </p>
+            </div>
           </div>
           <div class="about-me-skills">
             <div class="section_subtitle skills">Skills</div>
@@ -99,7 +100,11 @@
     <!-- Projects -->
     <section class="projects" id="projects">
       <div class="container">
-        <h1 class="section_title">PROJECTS</h1>
+        <div class="section_title">PROJECTS</div>
+        <div class="section_subtitle">
+        Here you will find some of the personal projects that I created with
+        each project containing its own case study.
+        </div>
         <div class="portfolio_items">
           <a class="portfolio_item" href="#project">
             <div class="hidden_text">
@@ -179,8 +184,8 @@
             AXEL BAWOR
           </div>
           <div class="footer_my_profile">
-            A Web Developer building the<br>
-            Frontend and Backend <br>
+            A Web Developer building the
+            Frontend<br> and Backend 
             of Websites and Web Applications.
           </div>
         </div>
