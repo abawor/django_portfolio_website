@@ -124,6 +124,7 @@ section {
 
 .nav-bar a {
     color: var(--clr-light);
+    transition: color 0.3s ease-in-out;
 }
 
 .nav-bar a:hover {
@@ -136,6 +137,36 @@ section {
 
 .hamburger {
     display: none;
+    color: var(--clr-light);
+    font-size: 1.6em;
+}
+
+.close-mark {
+    display: none;
+    color: var(--clr-light);
+    font-size: 1.6em;
+}
+
+@media (max-width: 1000px) {
+    .nav_bar_links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        text-align: end;
+        right: 0;
+        background-color: var(--clr-dark);
+    }
+    .nav_bar_links a {
+        display: block;
+        padding: 1em;
+        padding-right: 3em;
+        padding-left: 5em;
+        margin-left: 0;
+        border-top: 1px solid var(--clr-light);
+    }
+    .hamburger {
+        display: flex;
+    }
 }
 
 /* Intro */
@@ -177,6 +208,14 @@ section {
     transform: translateY(-50%);
 }
 
+.intro_social a {
+    transition: background-color 0.3s ease-in-out
+}
+
+.intro_social a:hover {
+    background-color: var(--clr-main);
+}
+
 .intro_social i {
     padding: 1.5em 1em;
 }
@@ -188,13 +227,12 @@ section {
     width: 100%;
     text-align: center;
     color: var(--clr-light);
-    transition: background-color 0.5s, scale 0.5s;
+    transition: scale 0.3s ease-in-out;
 
 }
 
 .intro_social .fa-brands:hover,
 .intro_social .fa-solid:hover {
-    background-color: var(--clr-main);
     scale: 1.2;
 }
 
