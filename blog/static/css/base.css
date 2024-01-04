@@ -149,12 +149,16 @@ section {
 
 @media (max-width: 1000px) {
     .nav_bar_links {
-        display: none;
+        display: block;
         position: absolute;
-        top: 100%;
+        top: -350px;
         text-align: end;
         right: 0;
         background-color: var(--clr-dark);
+        transition: 0.5s;
+    }
+    .nav_bar_links.active {
+        top: 52px;
     }
     .nav_bar_links a {
         display: block;

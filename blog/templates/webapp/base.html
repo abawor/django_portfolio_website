@@ -9,11 +9,13 @@
     <script src="https://kit.fontawesome.com/9bd6955a38.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
+    <div id="home"></div>
+    
     <!-- Header -->
     <header class="header">
       <nav class="nav-bar">
         <div class="nav_bar_home">
-          <a href="/" class="home">AxelDEV</a>
+          <a href="#home" class="home">AxelDEV</a>
         </div>
         <div class="hamburger">
           <i class="fa-solid fa-bars"></i>
@@ -22,18 +24,18 @@
           <i class="fa-solid fa-xmark close"></i>
         </div>
         <div class="nav_bar_links">
-          <a href="#intro">Home</a>
-          <a href="#about-me">About me</a>
-          <a href="#projects">Projects</a>
-          <a href="{% url 'blog' %}">Blog</a>
-          <a href="{% url 'resume' %}">Resume</a>
-          <a href="#contact">Contact</a>
+          <a href="#home" class="nav_bar_link">Home</a>
+          <a href="#about-me" class="nav_bar_link">About me</a>
+          <a href="#projects" class="nav_bar_link">Projects</a>
+          <a href="{% url 'blog' %}" class="nav_bar_link">Blog</a>
+          <a href="{% url 'resume' %}" class="nav_bar_link">Resume</a>
+          <a href="#contact" class="nav_bar_link">Contact</a>
         </div>
       </nav>
     </header>
 
     <!-- Intro -->
-    <section class="intro" id="intro">
+    <section class="intro">
       <div class="intro-text">
         <div class="intro_title">HEY, I'M AXEL BAWOR</div>
         <div class="intro_subtitle">
