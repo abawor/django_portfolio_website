@@ -9,7 +9,7 @@
     --ff-secondary: 'Source Code Pro', monospace;
     
     --fw-reg: 300;
-    --fw-bold: 900;
+    --fw-bold: 600;
     
     --clr-light: #fff;
     --clr-medium: #c2c1c1;
@@ -34,8 +34,8 @@
 
 @media (min-width: 800px) {
     :root {
-        --fs-h1: 3rem;
-        --fs-h2: 2.25rem;
+        --fs-h1: 2.5rem;
+        --fs-h2: 2rem;
         --fs-h3: 1.25rem;
         --fs-body: 1rem;
 
@@ -61,6 +61,7 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
+    letter-spacing: 0.05em;
 }
 
 a,
@@ -71,13 +72,14 @@ i {
 }
 
 section {
-    padding: 3em 0;
+    padding: 6em 0;
 }
 
 .section_title {
     font-size: var(--fs-h1);
     text-align: center;
-    font-weight: bold;
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.15em;
 }
 
 .section_title::after {
@@ -96,6 +98,8 @@ section {
 .section_subtitle {
     font-size: var(--fs-h3);
     text-align: center;
+    letter-spacing: 0.1em;
+    margin: 0em 2em 3em;
 }
 
 .container {
@@ -103,12 +107,32 @@ section {
     margin: auto;
 }
 
+.shortcut_button {
+    display: block;
+    width: 10em;
+    margin: 2em auto 0;
+    color: var(--clr-light);
+    background: var(--clr-main);
+    padding: 0.5em 2em;
+    font-size: var(--fs-h3);
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.5s;
+}
+
+.shortcut_button:hover {
+    transform: translateY(-5px);
+    color: var(--clr-light);
+}
+
+
+
 /* Header */
 
 .header {
     background-color: var(--clr-dark);
     padding: 1em;
-    font-weight: bold;
+    font-weight: var(--fw-bold);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -147,7 +171,7 @@ section {
     font-size: 1.6em;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
     .nav_bar_links {
         display: block;
         position: absolute;
@@ -182,8 +206,9 @@ section {
 }
 
 .intro_title {
-    font-size: calc(var(--fs-h1) * 1.5);
-    font-weight: bold;
+    font-size: calc(var(--fs-h1) * 1.75);
+    font-weight: var(--fw-bold);
+    margin-top: 1em;
 }
 
 .intro_subtitle {
@@ -200,7 +225,7 @@ section {
 }
 
 .intro-text .section_title {
-    font-weight: bold;
+    font-weight: var(--fw-bold);
 }
 
 .intro_social {
@@ -283,11 +308,6 @@ section {
     color: var(--clr-dark);
 }
 
-.about-me-desc {
-    margin: 0em 2em 3em;
-    text-align: center;
-}
-
 .about-me-columns {
     margin: auto 2em;
     display: flex;
@@ -303,10 +323,16 @@ section {
 
 .section_subtitle.my-story,
 .section_subtitle.skills {
-    margin-bottom: 0.6em;
+    margin: 0 0 0.6em;
     font-size: var(--fs-h2);
     font-weight: var(--fw-bold);
     text-align: left;
+}
+
+@media (max-width: 800px) {
+    .section_subtitle.skills {
+        margin-top: 1em;
+    }
 }
 
 .skills-list {
@@ -325,13 +351,16 @@ section {
     border-radius: 5px;
 }
 
-
-
+.contact_button {
+    margin: 1em 0;
+    font-size: var(--fs-body);
+}
 
 /* Projects */
 
 .projects {
     background-color: var(--clr-light);
+    text-align: center;
 }
 
 .portfolio_items {
@@ -411,10 +440,6 @@ section {
     text-align: center;
 }
 
-.contact .section_subtitle {
-    font-size: var(--fs-h3);
-}
-
 .contact_form_container {
     margin: 2em auto 2em;
     width: 90%;
@@ -489,6 +514,7 @@ input[type=text], select, textarea {
 .footer_social_title {
     font-size: var(--fs-h3);
     font-weight: var(--fw-bold);
+    margin-bottom: 0.5em;
 }
 
 .footer_my_profile {

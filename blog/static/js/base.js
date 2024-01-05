@@ -21,7 +21,7 @@ closeMark.addEventListener("click", () => {
 });
 
 window.addEventListener("resize", () => {
-    if (window.innerWidth >= 1000 ) {
+    if (window.innerWidth >= 800 ) {
         navBarLinks.style.display = "flex"
         hamburgerBtn.style.display = "none"
         closeMark.style.display = "none"
