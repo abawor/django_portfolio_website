@@ -131,7 +131,7 @@ section {
 
 .header {
     background-color: var(--clr-dark);
-    padding: 1em;
+    padding: 0.5em 1em;
     font-weight: var(--fw-bold);
     position: sticky;
     top: 0;
@@ -141,6 +141,7 @@ section {
 .nav-bar {
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
     justify-content: space-between;
     margin: 0 2em;
     font-size: var(--fs-body);
@@ -157,6 +158,20 @@ section {
 
 .nav_bar_links a {
     margin-left: 2em;
+}
+
+.nav_bar_home {
+    display: flex;
+    align-items: center;
+}
+
+.my_image {
+    width: 50px;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid var(--clr-main);
+    overflow: hidden;
+    margin-right: 1em;
 }
 
 .hamburger {
@@ -182,7 +197,7 @@ section {
         transition: 0.5s;
     }
     .nav_bar_links.active {
-        top: 52px;
+        top: 68px;
     }
     .nav_bar_links a {
         display: block;
@@ -407,7 +422,6 @@ section {
     scale: 1.1;
 }
 
-
 .hidden_text {
     visibility: hidden;
     font-size: var(--fs-h3);
@@ -424,12 +438,21 @@ section {
     z-index: 100;
     pointer-events: none;
     transition: visibility 0.4s, opacity 0.4s;
-
 }
 
 .portfolio_item:hover .hidden_text {
     visibility: visible;
     opacity: 0.8;
+}
+
+.cv_download_text {
+    margin-bottom: 1em;
+}
+
+.cv_download_button {
+    background: var(--clr-main);
+    font-size: var(--fs-body);
+    margin-top: 0;
 }
 
 /* Contact */
