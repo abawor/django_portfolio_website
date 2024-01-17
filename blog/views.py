@@ -3,10 +3,30 @@ from django.utils import timezone
 from .models import Post
 from .forms import PostForm
 from django.shortcuts import redirect
+from django.core.mail import send_mail
+from django.conf import settings
+from django.http import JsonResponse
 
 
 def home_page(request):
     return render(request, 'webapp/base.html')
+
+
+def send_email(request):
+    subject = request.POST['subject']
+    message = 'Name: ' + request.POST['name'] + '\n\nEmail: ' + request.POST['email'] + '\n\n' + request.POST['message']
+
+    if request.method == "POST":
+        send_mail(
+            subject,
+            message,
+            settings.EMAIL_HOST_USER,
+            ['abawor200@gmail.com'],
+            fail_silently=False
+        )
+        return JsonResponse({'status': 'success', 'message': 'Email sent successfully'})
+
+    return JsonResponse({'status': 'error', 'message': 'Invalid request'})
 
 
 def resume(request):

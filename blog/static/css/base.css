@@ -491,7 +491,7 @@ input[type=text], select, textarea {
 
 }
   
-.contact_form_container .submit_message {
+.contact_form_container .submit_button {
     background-color: var(--clr-main);
     color: white;
     padding: 12px 20px;
@@ -503,10 +503,15 @@ input[type=text], select, textarea {
     transition: transform 0.5s, filter 0.5s;
 }
   
-.contact_form_container .submit_message:hover {
+.contact_form_container .submit_button:hover {
     transform: translateY(-3px);
 }
 
+.contact_form_container .submit_button[disabled] {
+    background-color: var(--clr-medium);
+    pointer-events: none;    
+}
+  
 
 
 /* Footer */

@@ -168,17 +168,22 @@
           to you as soon as possible.
         </div>
         <div class="contact_form_container">
-          <form class="contact_form">
+          <form class="contact_form" id="contact-me" method="post" action="{% url 'send_email' %}" data-url="{% url 'send_email' %}">
+            {% csrf_token %}
+            <div>All fields are required</div>
             <label for="name"> Name</label>
             <input type="text" id="name" name="name" placeholder="Your name">
         
             <label for="email">Email</label>
             <input type="text" id="email" name="email" placeholder="Your email">
         
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject">
+
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Your message" style="height:200px"></textarea>
         
-            <input type="submit" value="Submit" class="submit_message">
+            <input type="submit" value="Submit" class="submit_button" disabled>
         
           </form>
         </div>
