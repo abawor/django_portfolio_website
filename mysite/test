@@ -1,8 +1,0 @@
-def concatenate(*args):
-    string = []
-    for i in args:
-        string.append(i)
-    return  string.split('-')
-
-
-print(concatenate("I", "love", "Python", "!"))
