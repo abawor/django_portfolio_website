@@ -33,6 +33,7 @@ def resume(request):
     return render(request, 'webapp/resume.html')
 
 
+# views for blog posts
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'webapp/post_list.html', {'posts': posts})
