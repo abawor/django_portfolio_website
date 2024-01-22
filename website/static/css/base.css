@@ -11,18 +11,30 @@
     --fw-reg: 300;
     --fw-bold: 600;
     
-    --clr-light: #fff;
-    --clr-medium: #c2c1c1;
-    --clr-dark: #303030;
-    --clr-main: #791e7c;
+    --clr-white: #fff;
+    --clr-light: #d9d2b2;
+    --clr-medium: #344455;
+    --clr-dark: #233145;
+    --clr-main: linear-gradient(-45deg, #23a6d5, #23d5ab);
+
+    --bg-gradient: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     
     --fs-h1: 2rem;
     --fs-h2: 1.5rem;
     --fs-h3: 1.125rem;
     --fs-body: 0.9rem;
 
+    --ts0: 0px 0px 10px rgba(255,255,255,0.9);
+    --ts1: 2px 2px 0px rgba(0,0,0,0.3);
+    --ts2: 2px 2px 2px rgba(0,0,0,0.3);
+    --ts3: 2px 2px 5px rgba(0,0,0,0.3);
+
+
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
+    
+    --bs2: 0 0 1em rgba(0,0,0,.25),
+          0 0 1em rgba(0,0,0,.15);
 
     --s: 125px;
 
@@ -50,18 +62,27 @@ html {
 }
 
 body {
-    background:
-    conic-gradient(from  45deg at 75% 75%, var(--c3) 90deg,var(--c1) 0 180deg,#0000 0),
-    conic-gradient(from -45deg at 25% 25%, var(--c3) 90deg,#0000 0),
-    conic-gradient(from -45deg at 50% 100%,#0000 180deg,var(--c3) 0),
-    conic-gradient(from -45deg,var(--c1) 90deg, var(--c2) 0 225deg,var(--c4) 0);
-    background-size: var(--s) var(--s); /* control the size here */
+    background: var(--bg-gradient);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;  
     color: var(--clr-dark);
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
     letter-spacing: 0.05em;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 a,
@@ -80,6 +101,7 @@ section {
     text-align: center;
     font-weight: var(--fw-bold);
     letter-spacing: 0.15em;
+    text-shadow: var(--ts2);
 }
 
 .section_title::after {
@@ -100,6 +122,7 @@ section {
     text-align: center;
     letter-spacing: 0.1em;
     margin: 0em 2em 3em;
+    text-shadow: var(--ts3);
 }
 
 .container {
@@ -111,18 +134,20 @@ section {
     display: block;
     width: 10em;
     margin: 2em auto 0;
-    color: var(--clr-light);
+    color: var(--clr-white);
     background: var(--clr-main);
     padding: 0.5em 2em;
     font-size: var(--fs-h3);
     text-align: center;
     border-radius: 5px;
     transition: transform 0.5s;
+    box-shadow: var(--bs);
+    text-shadow: var(--ts3);
 }
 
 .shortcut_button:hover {
     transform: translateY(-5px);
-    color: var(--clr-light);
+    color: var(--clr-white);
 }
 
 
@@ -135,6 +160,7 @@ section {
     font-weight: var(--fw-bold);
     position: sticky;
     top: 0;
+    box-shadow: var(--bs);
     z-index: 100;
 }
 
@@ -148,12 +174,15 @@ section {
 }
 
 .nav-bar a {
-    color: var(--clr-light);
-    transition: color 0.3s ease-in-out;
+    background: var(--clr-light);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-bar a:hover {
-    color: var(--clr-main);
+    background: var(--clr-main);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav_bar_links a {
@@ -169,9 +198,10 @@ section {
     width: 50px;
     height: 100%;
     border-radius: 50%;
-    border: 2px solid var(--clr-main);
+    border: 2px solid transparent;
     overflow: hidden;
     margin-right: 1em;
+    background: var(--clr-main);
 }
 
 .hamburger {
@@ -218,16 +248,19 @@ section {
     display: block;
     height: calc(100vh - 2em);
     text-align: center;
+    color: var(--clr-light);
 }
 
 .intro_title {
     font-size: calc(var(--fs-h1) * 1.75);
     font-weight: var(--fw-bold);
     margin-top: 1em;
+    text-shadow: var(--ts1);
 }
 
 .intro_subtitle {
-    font-size: var(--fs-h2);
+    font-size: var(--fs-h1);
+    text-shadow: var(--ts2);
 }
 
 .intro-text {
@@ -250,14 +283,11 @@ section {
     top: 50%;
     background-color: var(--clr-dark);
     transform: translateY(-50%);
-}
-
-.intro_social a {
-    transition: background-color 0.3s ease-in-out
+    box-shadow: var(--bs);
 }
 
 .intro_social a:hover {
-    background-color: var(--clr-main);
+    background: var(--clr-main);
 }
 
 .intro_social i {
@@ -286,7 +316,7 @@ section {
     left: 50%;
     width: 60px;
     height: 60px;
-    border: 2px solid var(--clr-dark);
+    border: 2px solid var(--clr-light);
     border-radius: 50%;
     animation: down 1.5s infinite;
     &::before {
@@ -296,8 +326,8 @@ section {
         left: 18px;
         width: 18px;
         height: 18px;
-        border-left: 2px solid var(--clr-dark);
-        border-bottom: 2px solid var(--clr-dark);
+        border-left: 2px solid var(--clr-light);
+        border-bottom: 2px solid var(--clr-light);
         transform: rotate(-45deg);
     }
 }
@@ -320,7 +350,7 @@ section {
 
 .about-me {
     background-color: var(--clr-medium);
-    color: var(--clr-dark);
+    color: var(--clr-light);
 }
 
 .about-me-columns {
@@ -360,10 +390,12 @@ section {
 }
 
 .skills-list li {
-    background-color: var(--clr-main);
+    background: var(--clr-main);
     color: white;
     padding: 0.25em 0.75em;
     border-radius: 5px;
+    box-shadow: var(--bs);
+    text-shadow: var(--ts3);
 }
 
 .contact_button {
@@ -374,8 +406,9 @@ section {
 /* Projects */
 
 .projects {
-    background-color: var(--clr-light);
+    background-color: var(--clr-dark);
     text-align: center;
+    color: var(--clr-light);
 }
 
 .portfolio_items {
@@ -403,13 +436,14 @@ section {
     overflow: hidden;
     position: relative;
     border-radius: 20px;
-    border: 5px solid var(--clr-medium);
-    transition: border 0.4s, background-color 0.4s;
+    border: none;
+    --webkit-transition: background 0.4s;
+    box-shadow: var(--bs2);
+
 }
 
 .portfolio_item:hover {
-    background-color: var(--clr-main);
-    border: 5px solid var(--clr-main);
+    background: var(--clr-main);
 }
 
 .portfolio_item img {
@@ -427,8 +461,8 @@ section {
     font-size: var(--fs-h3);
     opacity: 0;
     transition: display 0.4s, opacity 0.4s;
-    color: var(--clr-light);
-    background-color: var(--clr-main);
+    color: var(--clr-white);
+    background: var(--clr-main);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -460,14 +494,18 @@ section {
 }
 
 .portfolio_item_desc_box {
-    background-color: var(--clr-light);
-    color: var(--clr-dark);
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
     border-radius: 5px;
     padding: 15px 25px;
     text-align: center;
     width: 75%;
     position: relative;
     cursor: default;
+}
+
+.desc_title_top {
+    margin-top: 0.5em !important;
 }
 
 .portfolio_item_desc_title {
@@ -519,7 +557,7 @@ section {
 
 .contact {
     background-color: var(--clr-medium);
-    color: var(--clr-dark);
+    color: var(--clr-light);
     text-align: center;
 }
 
@@ -527,32 +565,35 @@ section {
     margin: 2em auto 2em;
     width: 90%;
     max-width: 1000px;
-    background: var(--clr-light);
+    background: var(--clr-dark);
+    color: var(--clr-light);
     padding: 1em 2em 2em;
     border-radius: 10px;
     font-weight: var(--fw-bold);
     text-align: left;
     font-family: var(--ff-secondary);
+    box-shadow: var(--bs);
 }
 
 label {
     margin: 1em auto 0.1em;
     font-size: var(--fs-body);
-    color: var(--clr-dark);
+    color: var(--clr-light);
 }
 
 input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid var(--clr-medium);
+    color: var(--clr-light);
     border-radius: 5px;
     display: block;
     background-color: var(--clr-medium);
-
+    box-shadow: var(--bs);
 }
   
 .contact_form_container .submit_button {
-    background-color: var(--clr-main);
+    background: var(--clr-main);
     color: white;
     padding: 12px 20px;
     margin-top: 1em;
@@ -561,6 +602,8 @@ input[type=text], select, textarea {
     cursor: pointer;
     text-align: center;
     transition: transform 0.5s, filter 0.5s;
+    box-shadow: var(--bs);
+    text-shadow: var(--ts3);
 }
   
 .contact_form_container .submit_button:hover {
@@ -568,7 +611,7 @@ input[type=text], select, textarea {
 }
 
 .contact_form_container .submit_button[disabled] {
-    background-color: var(--clr-medium);
+    background: gray;
     pointer-events: none;    
 }
   
