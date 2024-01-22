@@ -4,6 +4,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeMark = document.querySelector(".close-mark");
     const submitBtn = document.querySelector(".submit_button")
     const formFields = document.querySelectorAll("#contact-me input[type='text'], #contact-me textarea");
+    const portfolioItem = document.querySelectorAll(".portfolio_item")
+    const portfolioItemDesc = document.querySelectorAll(".portfolio_item_desc")
+    const closeBtns = document.querySelectorAll(".close_portfolio_item_desc")
+
+    for (let i = 0; i < portfolioItem.length; i++) {
+        portfolioItemDescClickHandler(portfolioItem[i], portfolioItemDesc[i], closeBtns[i])
+    }
+
+    function portfolioItemDescClickHandler(portfolioItem, portfolioItemDesc, closeBtn) {
+        portfolioItem.addEventListener("click", () => {
+            portfolioItemDesc.style.display = "flex"
+        })
+        closeBtn.addEventListener("click", (event) => {
+            event.stopPropagation()
+            portfolioItemDesc.style.display = "none"
+        })
+    }
+
+ 
 
     hamburgerBtn.addEventListener("click", () => {
         navBarLinks.classList.toggle("active")
@@ -76,15 +95,16 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Error:', error)
         })
     });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 800 ) {
+            navBarLinks.style.display = "flex"
+            hamburgerBtn.style.display = "none"
+            closeMark.style.display = "none"
+        } else {
+            hamburgerBtn.style.display = "flex"
+            navBarLinks.style.display = "block"
+        }
+    });
 });
 
-window.addEventListener("resize", () => {
-    if (window.innerWidth >= 800 ) {
-        navBarLinks.style.display = "flex"
-        hamburgerBtn.style.display = "none"
-        closeMark.style.display = "none"
-    } else {
-        hamburgerBtn.style.display = "flex"
-        navBarLinks.style.display = "block"
-    }
-});

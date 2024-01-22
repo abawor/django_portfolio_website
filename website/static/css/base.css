@@ -445,14 +445,74 @@ section {
     opacity: 0.8;
 }
 
-.cv_download_text {
+.portfolio_item_desc {
+    display: none;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    background-color:  rgb(255 255 255 / 30%);;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.portfolio_item_desc_box {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    border-radius: 5px;
+    padding: 15px 25px;
+    text-align: center;
+    width: 75%;
+    position: relative;
+    cursor: default;
+}
+
+.portfolio_item_desc_title {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-body);
+    margin-top: 2em;
+}
+
+.portfolio_item_desc_text {
+    margin: 1em 0 0;
+}
+
+.close_portfolio_item_desc {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    border-radius: 50%;
+    background: var(--clr-main);
+    color: var(--clr-light);
+    padding: 15px;
+    line-height: 1;
+    font-family: cursive;
+    font-weight: bold;
+    width: 1em;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.technologies_used {
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.resume_download_text {
     margin-bottom: 1em;
 }
 
-.cv_download_button {
+.resume_download_button {
     background: var(--clr-main);
     font-size: var(--fs-body);
     margin-top: 0;
+    width: fit-content;
 }
 
 /* Contact */
