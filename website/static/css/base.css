@@ -612,7 +612,8 @@ input[type=text], select, textarea {
 
 .contact_form_container .submit_button[disabled] {
     background: gray;
-    pointer-events: none;    
+    pointer-events: none;  
+    box-shadow: none;  
 }
   
 
