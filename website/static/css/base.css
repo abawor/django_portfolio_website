@@ -5,8 +5,8 @@
 }
 
 :root {
-    --ff-primary: 'Source Sans Pro', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
+    --ff-primary: 'Source Code Pro', monospace;
+    --ff-secondary: ;
     
     --fw-reg: 300;
     --fw-bold: 600;
@@ -16,7 +16,8 @@
     --clr-medium: #344455;
     --clr-dark: #233145;
     --clr-main: linear-gradient(-45deg, #23a6d5, #23d5ab);
-
+    
+    --btn-gradient: linear-gradient(-45deg, #23a6d5, #23d5ab);
     --bg-gradient: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     
     --fs-h1: 2rem;
@@ -62,9 +63,6 @@ html {
 }
 
 body {
-    background: var(--bg-gradient);
-    background-size: 400% 400%;
-    animation: gradient 5s ease infinite;  
     color: var(--clr-dark);
     margin: 0;
     font-family: var(--ff-primary);
@@ -73,17 +71,35 @@ body {
     letter-spacing: 0.05em;
 }
 
-@keyframes gradient {
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #23d5ab 50%, #23a6d5 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+}
+
+.bg2 {
+animation-direction:alternate-reverse;
+animation-duration:4s;
+}
+
+.bg3 {
+animation-duration:5s;
+}
+
+@keyframes slide {
     0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
+      transform:translateX(-25%);
     }
     100% {
-        background-position: 0% 50%;
+      transform:translateX(25%);
     }
-}
+  }
 
 a,
 i {
@@ -248,7 +264,6 @@ section {
     display: block;
     height: calc(100vh - 2em);
     text-align: center;
-    color: var(--clr-light);
 }
 
 .intro_title {
@@ -316,7 +331,7 @@ section {
     left: 50%;
     width: 60px;
     height: 60px;
-    border: 2px solid var(--clr-light);
+    border: 2px solid var(--clr-dark);
     border-radius: 50%;
     animation: down 1.5s infinite;
     &::before {
@@ -326,8 +341,8 @@ section {
         left: 18px;
         width: 18px;
         height: 18px;
-        border-left: 2px solid var(--clr-light);
-        border-bottom: 2px solid var(--clr-light);
+        border-left: 2px solid var(--clr-dark);
+        border-bottom: 2px solid var(--clr-dark);
         transform: rotate(-45deg);
     }
 }
@@ -344,7 +359,9 @@ section {
     }
 }
 
-
+.projects_button {
+    background: var(--btn-gradient);
+}
 
 /* About me */
 
@@ -391,7 +408,7 @@ section {
 
 .skills-list li {
     background: var(--clr-main);
-    color: white;
+    color: var(--clr-white);
     padding: 0.25em 0.75em;
     border-radius: 5px;
     box-shadow: var(--bs);
@@ -510,8 +527,8 @@ section {
 
 .portfolio_item_desc_title {
     font-weight: var(--fw-bold);
-    font-size: var(--fs-body);
-    margin-top: 2em;
+    font-size: var(--fs-h3);
+    margin-top: 1em;
 }
 
 .portfolio_item_desc_text {
@@ -525,7 +542,7 @@ section {
     border: none;
     border-radius: 50%;
     background: var(--clr-main);
-    color: var(--clr-light);
+    color: var(--clr-white);
     padding: 15px;
     line-height: 1;
     font-family: cursive;
@@ -571,7 +588,7 @@ section {
     border-radius: 10px;
     font-weight: var(--fw-bold);
     text-align: left;
-    font-family: var(--ff-secondary);
+    font-family: var(--ff-primary);
     box-shadow: var(--bs);
 }
 
