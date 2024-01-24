@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     }
 
- 
-
     hamburgerBtn.addEventListener("click", () => {
         navBarLinks.classList.toggle("active")
         hamburgerBtn.style.display = "none"
@@ -95,16 +93,15 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Error:', error)
         })
     });
-
-    window.addEventListener("resize", () => {
-        if (window.innerWidth >= 800 ) {
-            navBarLinks.style.display = "flex"
-            hamburgerBtn.style.display = "none"
-            closeMark.style.display = "none"
-        } else {
-            hamburgerBtn.style.display = "flex"
-            navBarLinks.style.display = "block"
-        }
-    });
 });
 
+window.addEventListener("resize", () => {
+    if (window.innerWidth >= 800 ) {
+        navBarLinks.style.display = "flex"
+        hamburgerBtn.style.display = "none"
+        closeMark.style.display = "none"
+    } else {
+        hamburgerBtn.style.display = "flex"
+        navBarLinks.style.display = "block"
+    }
+});
