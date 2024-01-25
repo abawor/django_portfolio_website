@@ -481,7 +481,6 @@ section {
     border: none;
     --webkit-transition: background 0.4s;
     box-shadow: var(--bs2);
-
 }
 
 .portfolio_item:hover {
@@ -544,6 +543,35 @@ section {
     width: 75%;
     position: relative;
     cursor: default;
+    animation: popup 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes popupClose {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0);
+    }
 }
 
 .desc_title_top {

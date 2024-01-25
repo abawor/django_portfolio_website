@@ -2,25 +2,32 @@ document.addEventListener('DOMContentLoaded', function () {
     const hamburgerBtn = document.querySelector(".hamburger");
     const navBarLinks = document.querySelector(".nav_bar_links");
     const closeMark = document.querySelector(".close-mark");
-    const submitBtn = document.querySelector(".submit_button")
+    const submitBtn = document.querySelector(".submit_button");
     const formFields = document.querySelectorAll("#contact-me input[type='text'], #contact-me textarea");
-    const portfolioItem = document.querySelectorAll(".portfolio_item")
-    const portfolioItemDesc = document.querySelectorAll(".portfolio_item_desc")
-    const closeBtns = document.querySelectorAll(".close_portfolio_item_desc")
+    const portfolioItem = document.querySelectorAll(".portfolio_item");
+    const portfolioItemDesc = document.querySelectorAll(".portfolio_item_desc");
+    const portfolioItemDescBox = document.querySelectorAll(".portfolio_item_desc_box");
+    const closeBtns = document.querySelectorAll(".close_portfolio_item_desc");
 
     for (let i = 0; i < portfolioItem.length; i++) {
-        portfolioItemDescClickHandler(portfolioItem[i], portfolioItemDesc[i], closeBtns[i])
-    }
+        portfolioItemDescClickHandler(portfolioItem[i], portfolioItemDesc[i], portfolioItemDescBox[i], closeBtns[i])
+    };
 
-    function portfolioItemDescClickHandler(portfolioItem, portfolioItemDesc, closeBtn) {
+    function portfolioItemDescClickHandler(portfolioItem, portfolioItemDesc, portfolioItemDescBox, closeBtn) {
         portfolioItem.addEventListener("click", () => {
             portfolioItemDesc.style.display = "flex"
+            portfolioItemDescBox.style.animationPlayState = "running"
         })
         closeBtn.addEventListener("click", (event) => {
             event.stopPropagation()
-            portfolioItemDesc.style.display = "none"
+            portfolioItemDescBox.style.animation = "popupClose 0.5s"
+            portfolioItemDescBox.style.animationPlayState = "running"
+            setTimeout(() => {
+                portfolioItemDesc.style.display = "none"
+                portfolioItemDescBox.style.animation = "popup 0.7s"
+            }, 500)
         })
-    }
+    };
 
     hamburgerBtn.addEventListener("click", () => {
         navBarLinks.classList.toggle("active")
