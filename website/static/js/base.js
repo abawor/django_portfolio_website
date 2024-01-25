@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 window.addEventListener("resize", () => {
-    if (window.innerWidth >= 800 ) {
+    if (window.innerWidth >= 900 ) {
         navBarLinks.style.display = "flex"
         hamburgerBtn.style.display = "none"
         closeMark.style.display = "none"

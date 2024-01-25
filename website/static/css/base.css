@@ -186,7 +186,7 @@ section {
     align-items: center;
     justify-content: space-between;
     margin: 0 2em;
-    font-size: var(--fs-body);
+    font-size: var(--fs-h3);
 }
 
 @media (max-width: 800px) {
@@ -220,7 +220,7 @@ section {
     width: 50px;
     height: 100%;
     border-radius: 50%;
-    border: 2px solid transparent;
+    border: 2px solid var(--clr-light);
     overflow: hidden;
     margin-right: 1em;
     background: var(--clr-main);
@@ -238,7 +238,7 @@ section {
     font-size: 1.6em;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .nav_bar_links {
         display: block;
         position: absolute;
@@ -287,8 +287,17 @@ section {
 
 .intro-text {
     max-width: 100%;
-    margin: 0 4em;
+    margin: 0 4.5em;
     transform: translateY(25%);
+}
+
+@media (max-width: 1000px) {
+    .intro-text {
+        transform: none;
+    }
+    .intro {
+        height: unset;
+    }
 }
 
 @media (max-width: 800px) {
