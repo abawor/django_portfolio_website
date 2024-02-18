@@ -479,6 +479,7 @@ section {
     position: relative;
     border-radius: 20px;
     border: none;
+    cursor: pointer;
     --webkit-transition: background 0.4s;
     box-shadow: var(--bs2);
 }
@@ -605,11 +606,28 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: scale 0.3s;
 }
 
-.technologies_used {
+.close_portfolio_item_desc:hover {
+    scale: 1.1;
+}
+
+.technologies_used,
+.project_links {
     justify-content: center;
     margin-top: 1em;
+}
+
+.project_links li {
+    transition: scale 0.5s;
+}
+
+.project_links li:hover {
+    scale: 1.1;
+}
+.project_links a {
+    color: var(--clr-white);
 }
 
 .resume_download_text {
