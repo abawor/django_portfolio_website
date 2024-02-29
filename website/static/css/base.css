@@ -408,6 +408,11 @@ section {
     }
 }
 
+.about-me-my-story,
+.about-me-skills {
+    flex: 1 0 45%;
+}
+
 .section_subtitle.my-story,
 .section_subtitle.skills {
     margin: 0 0 0.6em;
@@ -576,7 +581,7 @@ section {
 }
 
 .desc_title_top {
-    margin-top: 0.5em !important;
+    margin-top: 1.5em !important;
 }
 
 .portfolio_item_desc_title {
@@ -593,21 +598,38 @@ section {
     position: absolute;
     top: 10px;
     right: 10px;
+    width: 30px;
+    height: 30px;
     border: none;
     border-radius: 50%;
     background: var(--clr-main);
     color: var(--clr-white);
-    padding: 15px;
-    line-height: 1;
-    font-family: cursive;
-    font-weight: bold;
-    width: 1em;
-    height: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 1em;
     transition: scale 0.3s;
 }
+
+.close_portfolio_item_desc::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: white;
+    width: 2px;
+    left: 14px;
+    top: 5px;
+    bottom: 6px;
+    transform: rotate(45deg);
+  }
+  .close_portfolio_item_desc::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: white;
+    height: 2px;
+    top: 13px;
+    left: 6px;
+    right: 5px;
+    transform: rotate(45deg);
+  }
 
 .close_portfolio_item_desc:hover {
     scale: 1.1;
