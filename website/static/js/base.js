@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const hamburgerBtn = document.querySelector(".hamburger");
     const navBarLinks = document.querySelector(".nav_bar_links");
     const closeMark = document.querySelector(".close-mark");
+    const hiddenProjects = document.querySelectorAll(".hidden_project")
+    const loadMoreProjects = document.querySelector(".load_more_button");
     const submitBtn = document.querySelector(".submit_button");
     const formFields = document.querySelectorAll("#contact-me input[type='text'], #contact-me textarea");
     const portfolioItem = document.querySelectorAll(".portfolio_item");
@@ -45,6 +47,16 @@ document.addEventListener('DOMContentLoaded', function () {
         navBarLinks.classList.remove("active")
         hamburgerBtn.style.display = "flex"
         closeMark.style.display = "none"
+    });
+
+    loadMoreProjects.addEventListener("click", () => {
+        if (hiddenProjects[0].style.display === "block") {
+            hiddenProjects.forEach((item) => item.style.display = "none")
+            loadMoreProjects.innerHTML = "Load more projects"
+        } else {
+            hiddenProjects.forEach((item) => item.style.display = "block")
+            loadMoreProjects.innerHTML = "Hide extra projects"
+        }
     });
 
     function isFormEmpty() {

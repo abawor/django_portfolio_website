@@ -463,7 +463,7 @@ section {
     grid-template-columns: 1fr 1fr;
     width: 100%;
     gap: 5em;
-    margin: 5em auto;
+    margin: 5em auto 3em;
 }
 
 @media (max-width: 800px) {
@@ -652,14 +652,24 @@ section {
     color: var(--clr-white);
 }
 
-.resume_download_text {
+.load_more_button {
+    background: var(--clr-main);
+    font-size: var(--fs-body);
     margin-bottom: 1em;
+    margin-top: 0;
+}
+
+.hidden_project {
+    display: none;
+}
+
+.resume_download_text {
+    margin: 3em auto 1em;
 }
 
 .resume_download_button {
     background: var(--clr-main);
     font-size: var(--fs-body);
-    margin-top: 0;
     width: fit-content;
 }
 
