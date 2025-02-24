@@ -281,7 +281,12 @@ section {
 }
 
 .intro_subtitle {
-    font-size: var(--fs-h1);
+    font-size: calc(var(--fs-h1) * 1.25);
+    text-shadow: var(--ts2);
+}
+
+.intro_tech {
+    font-size: var(--fs-h3);
     text-shadow: var(--ts2);
 }
 
@@ -505,6 +510,7 @@ section {
 
 .hidden_text {
     visibility: hidden;
+    width: 80%;
     font-size: var(--fs-h3);
     opacity: 0;
     transition: display 0.4s, opacity 0.4s;
@@ -523,7 +529,7 @@ section {
 
 .portfolio_item:hover .hidden_text {
     visibility: visible;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .portfolio_item_desc {
